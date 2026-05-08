@@ -1,0 +1,35 @@
+<view class="order-page">
+  <view class="top-dark">
+    <view class="mode-tabs">
+      <text class="{{mode==='pickup'?'active':''}}" data-mode="pickup" bindtap="switchMode">到店取</text>
+      <text>|</text>
+      <text class="{{mode==='delivery'?'active':''}}" data-mode="delivery" bindtap="switchMode">喜外送</text>
+    </view>
+    <view class="store">灵感茶饮·云壶镇乐业广场店 ></view>
+    <view class="sub">new style tea, by inspiration ></view>
+  </view>
+
+  <view class="panel">
+    <scroll-view class="left" scroll-y>
+      <block wx:for="{{categories}}" wx:key="*this">
+        <view class="cat {{activeCategory===index?'on':''}}" bindtap="selectCategory" data-idx="{{index}}">{{item}}</view>
+      </block>
+    </scroll-view>
+
+    <scroll-view class="right" scroll-y>
+      <view class="title">{{categories[activeCategory]}}</view>
+      <block wx:for="{{drinks}}" wx:key="id">
+        <view class="drink card">
+          <image src="{{item.image}}" mode="aspectFill" />
+          <view class="meta">
+            <view class="name">{{item.name}}</view>
+            <view class="desc">{{item.desc}}</view>
+            <view class="bottom"><text class="price">¥{{item.price}}</text><button data-id="{{item.id}}" bindtap="addToCart">+</button></view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="cart-bar" bindtap="goCart">购物车（{{cartCount}}） 去结算</view>
+</view>

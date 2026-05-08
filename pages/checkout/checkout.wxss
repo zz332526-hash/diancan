@@ -1,0 +1,1 @@
+.checkout{padding:24rpx}.box{padding:24rpx}.modes{display:flex;gap:16rpx}.modes button{flex:1;background:#f1f1f1}.modes .on{background:#111;color:#fff}.line{margin-top:24rpx;font-size:30rpx}.money{font-size:48rpx;font-weight:700}.pay-btn{margin-top:28rpx;background:#07c160;color:#fff}
