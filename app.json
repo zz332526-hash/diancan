@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/goods/goods",
+    "pages/profile/profile",
+    "pages/cart/cart",
+    "pages/checkout/checkout"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#111111",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/home/home", "text": "首页" },
+      { "pagePath": "pages/order/order", "text": "点单" },
+      { "pagePath": "pages/goods/goods", "text": "百货" },
+      { "pagePath": "pages/profile/profile", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

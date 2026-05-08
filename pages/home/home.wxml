@@ -1,0 +1,7 @@
+<view>
+  <view class="tabs"><text class="{{tab===0?'on':''}}" data-i="0" bindtap="switchTab">灵感上新</text><text data-i="1" bindtap="switchTab" class="{{tab===1?'on':''}}">喜茶瓶装</text><text>茶礼盒</text><text>灵感周边</text></view>
+  <view class="section-title">灵感上新</view>
+  <swiper indicator-dots autoplay circular>
+    <block wx:for="{{bannerList}}" wx:key="id"><swiper-item><image src="{{item.image}}" mode="aspectFill" class="banner"/></swiper-item></block>
+  </swiper>
+</view>
